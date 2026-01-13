@@ -9,6 +9,8 @@ export const ConcatNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Concat"
+      icon="⊕"
+      subtitle="Join two strings together"
       handles={[
         { id: `${id}-a`, type: 'target', side: 'left', style: { top: '35%' } },
         { id: `${id}-b`, type: 'target', side: 'left', style: { top: '70%' } },
@@ -26,4 +28,3 @@ export const ConcatNode = ({ id, data }) => {
     </BaseNode>
   );
 };
-

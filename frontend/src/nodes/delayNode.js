@@ -9,6 +9,8 @@ export const DelayNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Delay"
+      icon="⏱"
+      subtitle="Wait before continuing"
       handles={[
         { id: `${id}-in`, type: 'target', side: 'left' },
         { id: `${id}-out`, type: 'source', side: 'right' },
@@ -26,4 +28,3 @@ export const DelayNode = ({ id, data }) => {
     </BaseNode>
   );
 };
-

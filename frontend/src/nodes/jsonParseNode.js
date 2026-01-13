@@ -9,6 +9,8 @@ export const JsonParseNode = ({ id, data }) => {
   return (
     <BaseNode
       title="JSON Parse"
+      icon="{ }"
+      subtitle="Parse JSON string to object"
       handles={[
         { id: `${id}-json`, type: 'target', side: 'left' },
         { id: `${id}-object`, type: 'source', side: 'right', style: { top: '40%' } },
@@ -30,4 +32,3 @@ export const JsonParseNode = ({ id, data }) => {
     </BaseNode>
   );
 };
-

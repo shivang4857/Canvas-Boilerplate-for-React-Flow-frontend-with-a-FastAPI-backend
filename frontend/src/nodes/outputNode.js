@@ -11,6 +11,8 @@ export const OutputNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Output"
+      icon="↑"
+      subtitle="Display pipeline results"
       handles={[{ id: `${id}-value`, type: 'target', side: 'left' }]}
     >
       <FieldRow>

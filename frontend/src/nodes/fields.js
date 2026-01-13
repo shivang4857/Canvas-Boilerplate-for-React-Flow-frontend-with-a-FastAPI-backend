@@ -1,27 +1,30 @@
 const styles = {
   row: {
     display: 'grid',
-    gap: 6,
+    gap: '8px',
   },
   label: {
     display: 'grid',
-    gap: 4,
-    fontSize: 11,
-    color: 'rgba(226, 232, 240, 0.9)',
+    gap: '4px',
+    fontSize: '11px',
+    fontWeight: 500,
+    color: '#64748b',
   },
   control: {
     width: '100%',
-    padding: '6px 8px',
-    borderRadius: 8,
-    border: '1px solid rgba(148, 163, 184, 0.25)',
-    background: '#0b1220',
-    color: '#e5e7eb',
+    padding: '8px 10px',
+    borderRadius: '8px',
+    border: '1px solid #e2e8f0',
+    background: '#f8fafc',
+    color: '#1e293b',
+    fontSize: '12px',
     outline: 'none',
+    transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
   },
   helper: {
-    fontSize: 11,
-    color: 'rgba(148, 163, 184, 0.9)',
-    lineHeight: 1.3,
+    fontSize: '11px',
+    color: '#94a3b8',
+    lineHeight: 1.4,
   },
 };
 
@@ -73,4 +76,3 @@ export const LabeledTextarea = ({ label, value, onChange, placeholder, rows = 3 
 };
 
 export const HelperText = ({ children }) => <div style={styles.helper}>{children}</div>;
-

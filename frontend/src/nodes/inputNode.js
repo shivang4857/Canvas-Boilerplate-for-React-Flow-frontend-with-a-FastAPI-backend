@@ -11,6 +11,8 @@ export const InputNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Input"
+      icon="↓"
+      subtitle="Pass data into your pipeline"
       handles={[{ id: `${id}-value`, type: 'source', side: 'right' }]}
     >
       <FieldRow>

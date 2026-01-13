@@ -11,6 +11,8 @@ export const SwitchNode = ({ id, data }) => {
   return (
     <BaseNode
       title="Switch"
+      icon="⑂"
+      subtitle="Conditional routing"
       handles={[
         { id: `${id}-value`, type: 'target', side: 'left', style: { top: '35%' } },
         { id: `${id}-compare`, type: 'target', side: 'left', style: { top: '70%' } },
@@ -37,8 +39,7 @@ export const SwitchNode = ({ id, data }) => {
           placeholder="optional default"
         />
       </FieldRow>
-      <HelperText>Routes to True/False based on value vs compare.</HelperText>
+      <HelperText>Routes to True/False based on comparison.</HelperText>
     </BaseNode>
   );
 };
-

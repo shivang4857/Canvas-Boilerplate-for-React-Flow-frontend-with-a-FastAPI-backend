@@ -7,7 +7,12 @@ export const TextNode = ({ id, data }) => {
   const text = data?.text ?? '{{input}}';
 
   return (
-    <BaseNode title="Text" handles={[{ id: `${id}-output`, type: 'source', side: 'right' }]}>
+    <BaseNode
+      title="Text"
+      icon="📝"
+      subtitle="Static or template text"
+      handles={[{ id: `${id}-output`, type: 'source', side: 'right' }]}
+    >
       <FieldRow>
         <LabeledInput
           label="Text"
@@ -16,7 +21,7 @@ export const TextNode = ({ id, data }) => {
           placeholder="{{variable}}"
         />
       </FieldRow>
-      <HelperText>Part 3 will add dynamic variable handles here.</HelperText>
+      <HelperText>Use {"{{variable}}"} syntax for dynamic variables.</HelperText>
     </BaseNode>
   );
 };
