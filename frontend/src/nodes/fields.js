@@ -60,12 +60,21 @@ export const LabeledSelect = ({ label, value, onChange, options }) => {
   );
 };
 
-export const LabeledTextarea = ({ label, value, onChange, placeholder, rows = 3 }) => {
+export const LabeledTextarea = ({
+  label,
+  value,
+  onChange,
+  placeholder,
+  rows = 3,
+  textareaRef,
+  style,
+}) => {
   return (
     <label style={styles.label}>
       <span>{label}</span>
       <textarea
-        style={{ ...styles.control, resize: 'none' }}
+        ref={textareaRef}
+        style={{ ...styles.control, resize: 'none', ...(style ?? null) }}
         rows={rows}
         value={value}
         placeholder={placeholder}

@@ -52,4 +52,20 @@ export const useStore = create((set, get) => ({
         }),
       });
     },
+    pruneEdgesForNodeHandles: (nodeId, allowedHandleIds) => {
+      const allowed = new Set(allowedHandleIds);
+      set({
+        edges: get().edges.filter((edge) => {
+          const isSource = edge.source === nodeId;
+          const isTarget = edge.target === nodeId;
+
+          if (!isSource && !isTarget) return true;
+
+          if (isSource && edge.sourceHandle && !allowed.has(edge.sourceHandle)) return false;
+          if (isTarget && edge.targetHandle && !allowed.has(edge.targetHandle)) return false;
+
+          return true;
+        }),
+      });
+    },
   }));
