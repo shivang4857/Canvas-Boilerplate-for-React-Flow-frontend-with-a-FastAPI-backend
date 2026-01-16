@@ -1,4 +1,4 @@
-### VectorShift Frontend Technical Assessment
+
 
 This project is a small **pipeline builder** (drag nodes onto a canvas, connect them with edges) built with **React + React Flow** and a simple **FastAPI** backend.
 
@@ -13,6 +13,8 @@ npm start
 ```
 
 - App runs at `http://localhost:3000`
+- Create the .env in the frontend folder to run the backend -end at the desired port by default it will run at 8000 port
+  
 
 #### 2) Backend
 
